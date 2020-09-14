@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=en>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Libs - library management system</title>
+    <link rel=stylesheet type="text/css" href="{% static ' libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css'%}">
+    <link rel=stylesheet type="text/css" href="{% static 'libs/%40fortawesome/fontawesome-free/css/all.min.css' %}">
+    <link rel=stylesheet type="text/css" href="{% static 'css/style.css' %}" id=stylesheet>
+</head>
+<body class="overflow-hidden">
+    <header id=header-main>
+        <nav class="navbar navbar-main navbar-expand-lg navbar-light" id=navbar-main>
+            <div class=container>
+                <a class=navbar-brand>
+                    <img alt="Image placeholder" src="{% static 'img/brand/p_logo.png' %}" id=navbar-logo>
+                </a>
+                <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-main-collapse
+                    aria-controls=navbar-main-collapse aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-collapse-overlay" id=navbar-main-collapse>
+                    <div class=position-relative>
+                        <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-main-collapse
+                            aria-controls=navbar-main-collapse aria-expanded=false aria-label="Toggle navigation"><i
+                                data-feather=x></i>
+                        </button>
+                    </div>
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a
+                               class="nav-link" href="/">Home </a></li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="/books">Books</a></li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="/support">Support</a>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="/mybooks">My books</a>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate"><a class=nav-link
+                                href="/faq">FAQ's</a></li>
+                    </ul>
+                    <ul class="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
+                            <a class=nav-link href=# role=button data-toggle=dropdown aria-haspopup=true
+                                aria-expanded=false>Login</a>
+                            <div class="dropdown-menu dropdown-menu-md p-0">
+                                <ul class="list-group list-group-flush px-lg-4">
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Login as admin</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="login" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Login as student</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle=hover>
+                            <a class="btn btn-sm btn-dark btn-icon ml-3" href=# role=button data-toggle=dropdown
+                                aria-haspopup=true aria-expanded=false><span class=btn-inner--icon><i
+                                        data-feather=award></i></span> <span class=btn-inner--text>Register</span></a>
+                            <div class="dropdown-menu dropdown-menu-md p-0">
+                                <ul class="list-group list-group-flush px-lg-4">
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Register as admin</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown dropdown-animate">
+                                        <a href="register" class="list-group-item " role=button>
+                                            <div class=ml-3>
+                                                <h6 class="heading mb-0">Register as student</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="login" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                            login as student
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="register" class="btn btn-block btn-sm btn-primary" target=_blank>
+                            register as student
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="" class="btn btn-block btn-sm btn-secondary" target=_blank>
+                            login as admin
+                        </a>
+                    </div>
+                    <div class="d-lg-none p-2 text-center">
+                        <a href="" class="btn btn-block btn-sm btn-primary" target=_blank>
+                            register as admin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+     <footer class=position-relative id=footer-main>
+        <div class="footer footer-dark bg-dark">
+            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                <svg width=2560px height=100px xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
+                    preserveAspectRatio=none x=0px y=0px viewBox="0 0 2560 100"
+                    style="enable-background:new 0 0 2560 100" xml:space=preserve class=fill-section-secondary>
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+           
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="copyright text-sm font-weight-bold text-center">&copy; 2020 <a class=font-weight-bold
+                            target=_blank>Libs.</a> All
+                        rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"> </script> <script
+        src="{% static 'libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"> </script> <script
+        src="{% static 'libs/feather-icons/dist/feather.min.js' %}"> </script> <script
+        src="{% static 'libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"> </script> <script
+        src="{% static 'js/main.js' %}"> </script>
+    <script>
+        feather.replace({
+            width: "1em",
+            height: "1em"
+        })
+    </script>
+</body>
+
+</html>

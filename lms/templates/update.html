@@ -1,0 +1,83 @@
+{% extends 'links.html' %}
+{% load static %}
+{% block content %}
+<div class="pt-3 slice slice-sm bg-section-secondary">
+   <div class=container>
+      <div class="row justify-content-center">
+         <div class="col-lg-9">
+            <div class=card>
+               <ul class="nav nav-tabs navi-tabs justify-content-center">
+                  <li class="nav-item m-4"><a data-toggle="tab" href="#add" class="text-dark nav-link active">
+                        <h4><b>Add
+                              Book</b></h4>
+                     </a></li>
+                  <li class="nav-item m-4"><a data-toggle="tab" href="#rem" class="text-dark nav-link">
+                        <h4><b>Remove Book</b></h4>
+                     </a></li>
+               </ul>
+               <div class=card-body>
+                  <p class="mb-4 mt-3 h5 mx-5">Enter the Book Info :-</p>
+                  <form>
+                     <div class="tab-content">
+                        <div id="add" class="tab-pane fade-in active">
+                           <div class="row p-3 mx-3">
+                              <div class=col-md-6>
+                                 <div class=form-group><label class=form-control-label>Book Name</label> <input
+                                       class=form-control type=text placeholder="Enter book name"></div>
+                              </div>
+                              <div class=col-md-6>
+                                 <div class=form-group><label class=form-control-label>Author Name</label> <input
+                                       class=form-control type=text placeholder="Enter author name"></div>
+                              </div>
+                           </div>
+                           <div class="row p-3 mx-3">
+                              <div class=col-md-6>
+                                 <div class=form-group>
+                                    <label class=form-control-label>Book ID</label>
+                                    <input class="form-control" type="text" placeholder="ID"
+                                       onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
+                                    <small class="form-text text-muted mt-2">Only if you are adding book which is
+                                       already
+                                       in the library.</small>
+                                 </div>
+                              </div>
+                              <div class=col-md-6>
+                                 <div class=form-group>
+                                    <label class="form-control-label">Book Quantity</label>
+                                    <input class=form-control type=number placeholder="Quantity" min=0>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row justify-content-center">
+                              <button type=button class="btn btn-sm btn-primary">Add Book</button>
+                           </div>
+                        </div>
+                        <div id="rem" class="tab-pane fade">
+                           <div class="row p-3 mx-3">
+                              <div class=col-md-6>
+                                 <div class=form-group>
+                                    <label class=form-control-label>Book ID</label>
+                                    <input class="form-control" type="text" placeholder="ID"
+                                       onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
+                                 </div>
+                              </div>
+                              <div class=col-md-6>
+                                 <div class=form-group>
+                                    <label class=form-control-label>Book Qunatity</label>
+                                    <input class=form-control type=number placeholder="Quantity" min="0">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row justify-content-center">
+                              <button type=button class="btn btn-sm btn-danger">Remove Book</button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

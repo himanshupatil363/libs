@@ -1,0 +1,6 @@
+asgiref==3.2.10
+Django==3.1.1
+mysqlclient @ file:///C:/Users/Himanshu/Downloads/mysqlclient-1.4.6-cp36-cp36m-win32.whl
+pytz==2020.1
+South==1.0.2
+sqlparse==0.3.1
